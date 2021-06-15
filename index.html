@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="imgs/favicon.png">
   </head>
+  <script src="boos.js"></script>
   <body>
   
       <header>
@@ -97,6 +98,13 @@
             </h2>
           </article>
         </section>
+
+        <img id="boo1" src="imgs/boo3.gif" alt="Fantasminha assombrando a tela">
+        
+        <img id="boo2" src="imgs/boo1.gif" alt="Fantasminha assombrando a tela">
+      
+        <img id="boo3"src="imgs/boo2.gif" alt="Fantasminha assombrando a tela">
+      
       </main>
 
       <footer id="rodape">
@@ -109,6 +117,15 @@
             <a href="http://assombrado.com.br" target="_blank">AssombradO.com.br</a>
           </p>
           <div id="inscreva-se">
+            <h3>
+              Inscreva-se!
+            </h3> 
+            <form action="POST">
+              <label>Email: <input id="email" type="email"></label>
+              <label>Nome: <input id="nome" type="text"></label>
+              <label><input type="checkbox" value="sim">Aceito promoções</label>
+              <button id="">Enviar</button>
+            </form>
           </div>
         </div>
       </footer>
@@ -124,7 +141,7 @@
 
     <script>
       // faz o vídeo desaparecer de leve assim que terminar
-      const TEMPO = 9000;  // 11s, duração do vídeo
+      const TEMPO = 7000;  // 7s, duração do vídeo
       setTimeout(() => {
         // faz o vídeo desaparecer colocando a classe .desaparecido
         document.querySelector('.backdrop').classList.add('desaparecido');
@@ -134,7 +151,7 @@
 
 
       // no clique do botão #unmute, tira o atributo muted to video
-      document.querySelector('#unmute').addEventListener('click', e => {
+      document.querySelector('#unmute').addEventListener('mouseenter', e => {
         document.querySelector('.backdrop video').muted = false;
         e.currentTarget.classList.add('desaparecido');
       });

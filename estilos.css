@@ -71,9 +71,6 @@ nav li{
  
 }
 
-
-
-
 /* --- Conteúdo principal da página --- */
 main {
   padding-left: 2.5%;
@@ -82,12 +79,6 @@ main {
 }
 
 
-
-
-/* --- Principal >> Postagens principais --- */
-#posts-principais {
-  padding-top: 1.5em;
-}
 
 #posts-principais h1 {
   margin-bottom: 1em;
@@ -99,10 +90,13 @@ main {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  
 }
 
 #posts-principais .post .titulo {
   text-shadow: 1px 1px black;
+  top: 1px;
+  transition: all 200ms ease;
 }
 
 #posts-principais .post img {
@@ -111,11 +105,8 @@ main {
   box-sizing: border-box;
   border: 6px solid white;
   margin-bottom: .5em;
+  top:0px;
 }
-
-
-
-
 /* --- Principal >> Últimas postagens --- */
 #ultimas-postagens {
   margin-top: 3em;
@@ -143,9 +134,6 @@ main {
   display: inline-block;
 }
 
-
-
-
 /* --- Principal >> Nuvem de tags --- */
 #tags {
   float: right;
@@ -157,11 +145,38 @@ main {
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: sticky;
+  top:0%;
+
+} 
+span:active{
+  position: relative;
+  left: -2px;
+  top: -2px;
 }
+span:link{
+  position: relative;
+  left: -2px;
+  top: -2px;
+  }
 
 #tags h1 {
   margin-bottom: 1em;
   text-shadow: 2px 2px #000;
+  
+}
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  background-color: rgba(35, 159, 30);
+  color: aliceblue;
+  border-radius:2px;
+  padding: auto;
+  margin: auto;
+  font-size: 18px;
 }
 
 .tag-1,
@@ -174,6 +189,7 @@ main {
   background-color: orange;
   color: white;
   text-shadow: 1px 1px black;
+  
 }
 
 .tag-2 {
@@ -195,14 +211,9 @@ footer {
   display: flex;
 }
 
-#rodape .logo-rodape {
+footer .logo-rodape {
   margin-right: 2em;
 }
-
-
-
-
-
 /* --- Vídeo --- */
 .backdrop {
   position: fixed;
@@ -268,4 +279,32 @@ footer {
   color: black;
   border-color: currentColor;
   box-shadow: none;
+}
+
+#boo1 {
+  opacity: 0.1;
+  width: 40px;
+  position: absolute;
+  left: 15ch;
+}
+#boo2 {
+  opacity: 0.2;
+  width: 40px;
+  position: absolute;
+  left: 90ch;
+}
+#boo3 {
+  opacity: 0.3;
+  width: 40px;
+  position: absolute;
+  left: 150ch;
+}
+#boo1:hover {
+  opacity: 1;
+}
+#boo2:hover {
+  opacity: 1;
+}
+#boo3:hover {
+  opacity: 1;
 }
